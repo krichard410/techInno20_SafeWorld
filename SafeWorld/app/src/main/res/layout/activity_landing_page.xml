@@ -9,9 +9,10 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="109dp"
-        android:layout_height="57dp"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
         android:text="LOGIN"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.165"
@@ -22,8 +23,9 @@
     <Button
         android:id="@+id/signup"
         android:layout_width="190dp"
-        android:layout_height="57dp"
+        android:layout_height="60dp"
         android:text="CREAT ACCOUNT"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.832"
