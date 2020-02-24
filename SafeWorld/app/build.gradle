@@ -31,4 +31,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0-alpha10'
     // add the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    // add the Firebase SDK for Auth
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
 }
