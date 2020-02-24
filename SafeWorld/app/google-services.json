@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "701261961532",
+    "firebase_url": "https://safeworld-388a0.firebaseio.com",
+    "project_id": "safeworld-388a0",
+    "storage_bucket": "safeworld-388a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701261961532:android:a007153c7da8e74d1ae639",
+        "android_client_info": {
+          "package_name": "com.safeworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701261961532-am00nv95400k83728dftebogugdogk00.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeI2gGC1F89FVD7MUARh0rdO6gNdokJ10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701261961532-am00nv95400k83728dftebogugdogk00.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
