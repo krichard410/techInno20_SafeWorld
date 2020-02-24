@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authentication.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="159dp"
+        android:layout_height="85dp"
+        android:text="Welcome Back."
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <EditText
+        android:id="@+id/login_user_email"
+        android:layout_width="364dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:drawableStart="@drawable/auth_email"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/login_user_password"
+        android:layout_width="364dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:drawableStart="@drawable/auth_password"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_user_email"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="SIGN IN"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_user_password" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
