@@ -33,4 +33,13 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
     // add the Firebase SDK for Auth
     implementation 'com.google.firebase:firebase-auth:19.2.0'
+
+    //Network
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+
+    //Image
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
