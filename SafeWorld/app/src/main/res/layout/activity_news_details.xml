@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NewsDetails">
+    tools:context=".news.NewsDetails">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/webView"></WebView>
+            android:id="@+id/webView" />
     </ScrollView>
 
 </LinearLayout>
