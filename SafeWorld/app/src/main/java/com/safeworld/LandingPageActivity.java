@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.safeworld.authentication.LoginActivity;
 import com.safeworld.authentication.RegisterActivity;
 
@@ -43,18 +42,5 @@ public class LandingPageActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    protected void onStart() {
-        //user do not need to login again if they already login previously
-        super.onStart();
-        FirebaseUser user = mAuth.getCurrentUser();
-        if(user != null) {
-            //user is already connected  so we need to redirect him to home page
-            Intent toMain = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(toMain);
-            finish();
-        }
     }
 }
