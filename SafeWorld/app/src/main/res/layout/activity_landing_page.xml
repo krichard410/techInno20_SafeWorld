@@ -47,7 +47,7 @@
         android:id="@+id/signup"
         android:layout_width="190dp"
         android:layout_height="60dp"
-        android:text="CREAT ACCOUNT"
+        android:text="CREATE ACCOUNT"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
