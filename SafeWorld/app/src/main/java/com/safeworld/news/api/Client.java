@@ -2,7 +2,11 @@ package com.safeworld.news.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
+/**
+ * The Client class use for sending the query to news api
+ * @author nieruize
+ * @version 1.0
+ */
 public class Client {
 
     public static final String BASE_URL = "https://newsapi.org/v2/";

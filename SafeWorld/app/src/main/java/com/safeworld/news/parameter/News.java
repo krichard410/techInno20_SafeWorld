@@ -4,7 +4,11 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
-
+/**
+ * The Article class use constructor each news object
+ * @author nieruize
+ * @version 1.0
+ */
 public class News {
 
     @SerializedName("status")
@@ -19,6 +23,7 @@ public class News {
     @Expose
     private List<Article> articles;
 
+    // get and set method
     public String getStatus() {
         return status;
     }

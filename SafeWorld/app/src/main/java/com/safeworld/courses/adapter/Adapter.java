@@ -18,11 +18,16 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * The Adapter class using for displaying the course list
+ * @author nieruize
+ * @version 1.0
+ */
 public class Adapter extends RecyclerView.Adapter<Adapter.CourseViewHolder> {
     private Context mContext;
     private List<Course> mData;
 
+    // constructor
     public Adapter(Context context, List<Course> data) {
         mContext = context;
         mData = data;
@@ -30,16 +35,17 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CourseViewHolder> {
 
     @NonNull
     @Override
+    // inflater the content to view
     public CourseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View row = LayoutInflater.from(mContext).inflate(R.layout.fragment_courses_item,parent,false);
         return new CourseViewHolder(row);
     }
 
     @Override
+    // bind the view into view holder
     public void onBindViewHolder(@NonNull CourseViewHolder holder, int position) {
 
         final Course course = mData.get(position);
-
         Picasso.get().load(mData.get(position).getImg()).into(holder.course_img);
         holder.tv_title.setText(mData.get(position).getTitle());
         holder.tv_desc.setText(mData.get(position).getDescription());

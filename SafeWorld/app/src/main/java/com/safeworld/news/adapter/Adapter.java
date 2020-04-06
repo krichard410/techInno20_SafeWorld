@@ -19,12 +19,17 @@ import java.util.Locale;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * The Adapter class using for displaying the news list
+ * @author nieruize
+ * @version 1.0
+ */
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     private List<Article> articles;
     private Context context;
 
+    // constructor
     public Adapter(List<Article> articles, Context context) {
         this.articles = articles;
         this.context = context;
@@ -32,12 +37,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @NonNull
     @Override
+    // inflater the content to view
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
     View view = LayoutInflater.from(context).inflate(R.layout.activity_news_items, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
+    // bind the view into view holder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         final Article art = articles.get(position);

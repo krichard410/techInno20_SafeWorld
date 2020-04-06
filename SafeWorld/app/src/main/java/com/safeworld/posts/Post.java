@@ -1,13 +1,18 @@
 package com.safeworld.posts;
 
-
+/**
+ * The Course class using for creating post object
+ * @author nieruize
+ * @version 1.0
+ */
 public class Post {
 
+    // attribute
     private String title;
     private String description;
     private String userId;
 
-
+    // constructor
     public Post(String title, String description, String userId) {
         this.title = title;
         this.description = description;
@@ -18,6 +23,7 @@ public class Post {
     public Post() {
     }
 
+    // get and set method
     public String getTitle() {
         return title;
     }

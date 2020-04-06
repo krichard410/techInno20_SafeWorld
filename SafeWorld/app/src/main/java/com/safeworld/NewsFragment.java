@@ -23,9 +23,14 @@ import com.safeworld.news.parameter.News;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * The NewsFragment for displaying the news and send the request to news api
+ * @author nieruize
+ * @version 1.0
+ */
 public class NewsFragment extends Fragment {
 
+    // attribute
     public static final String API_KEY = "97061584466e4c1a9ca46b71d0b3247d";
     private RecyclerView recyclerView;
     private List<Article> articles = new ArrayList<>();
@@ -46,6 +51,7 @@ public class NewsFragment extends Fragment {
         return root;
     }
 
+    // send the request to news api
     public void loadJson(String country, String API_KEY) {
         Call<News> call = Client.getInstance().getApi().getNews(country, API_KEY);
         call.enqueue(new Callback<News>() {

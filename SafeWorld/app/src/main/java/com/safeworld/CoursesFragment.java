@@ -23,9 +23,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * The CoursesFragment using for hold the content for course list
+ * @author nieruize
+ * @version 1.0
+ */
 public class CoursesFragment extends Fragment {
 
+    // attribute
     private FirebaseAuth mAuth;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
@@ -46,6 +51,7 @@ public class CoursesFragment extends Fragment {
         return root;
     }
 
+    // display the course info from the google firebase
     private void iniRvCourse() {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -2,7 +2,11 @@ package com.safeworld.news.parameter;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+/**
+ * The Article class use constructor each article object
+ * @author nieruize
+ * @version 1.0
+ */
 public class Article {
 
     @SerializedName("source")
@@ -33,6 +37,7 @@ public class Article {
     @Expose
     private String publishedAt;
 
+    // get and set method
     public Source getSource() {
         return source;
     }

@@ -1,12 +1,18 @@
 package com.safeworld.courses;
-
+/**
+ * The Course class using for creating course object
+ * @author nieruize
+ * @version 1.0
+ */
 public class Course {
 
+    // attribute
     private String title;
     private String description;
     private String img;
     private String url;
 
+    // constructor
     public Course(String title, String description, String img, String url) {
         this.title = title;
         this.description = description;
@@ -18,6 +24,7 @@ public class Course {
     public Course() {
     }
 
+    // get and set method
     public String getTitle() {
         return title;
     }

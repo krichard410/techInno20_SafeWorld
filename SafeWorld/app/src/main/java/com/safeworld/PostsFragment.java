@@ -38,9 +38,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * The ProfileFragment use for show posts
+ * @author nieruize
+ * @version 1.0
+ */
 public class PostsFragment extends Fragment {
 
+    // attribute
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     private FirebaseDatabase database;
@@ -78,6 +83,7 @@ public class PostsFragment extends Fragment {
         return root;
     }
 
+    // pop up function when user click the write post button
     private void iniPopup() {
         popAddPost = new Dialog(getContext());
         popAddPost.setContentView(R.layout.popup_add_post);
@@ -120,6 +126,7 @@ public class PostsFragment extends Fragment {
         });
     }
 
+    // add post function
     private void addPost(Post post) {
 
         database = FirebaseDatabase.getInstance();
@@ -139,6 +146,7 @@ public class PostsFragment extends Fragment {
         });
     }
 
+    // display the post
     private void iniRvPost() {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -166,7 +174,7 @@ public class PostsFragment extends Fragment {
     }
 
 
-
+    // show the error message
     private void showMessage(String message) {
         Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
 

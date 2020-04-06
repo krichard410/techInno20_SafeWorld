@@ -13,7 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-
+/**
+ * The UpgradeFragment use for show subscription type
+ * @author nieruize
+ * @version 1.0
+ */
 public class UpgradeFragment extends Fragment {
 
     private ViewPager mViewPager;

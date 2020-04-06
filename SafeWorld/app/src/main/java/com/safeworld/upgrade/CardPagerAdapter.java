@@ -15,7 +15,11 @@ import java.util.List;
 
 import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
-
+/**
+ * The CardPagerAdapter class using for display the card item
+ * @author nieruize
+ * @version 1.0
+ */
 public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
 
     private Context mContext;

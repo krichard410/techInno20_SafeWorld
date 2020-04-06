@@ -5,7 +5,11 @@ import android.view.View;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 
-
+/**
+ * The ShadowTransformer class using for implement the shadow transition when card item is clicked
+ * @author nieruize
+ * @version 1.0
+ */
 public class ShadowTransformer implements ViewPager.OnPageChangeListener, ViewPager.PageTransformer {
 
     private ViewPager mViewPager;

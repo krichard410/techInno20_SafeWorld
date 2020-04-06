@@ -15,7 +15,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.safeworld.R;
-
+/**
+ * The RegisterActivity class implement the register function when the user click the create account button
+ * @author nieruize
+ * @version 1.0
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     private Button signup_btn;
@@ -28,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // hide the actionbar in the top the screen
         getSupportActionBar().hide();
 
         userName = findViewById(R.id.signup_user_name);
@@ -37,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         signup_btn = findViewById(R.id.signup_btn);
         mAuth = FirebaseAuth.getInstance();
 
+        // implement the function of register button
         signup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    // implement the register function by using the firebase authentication
     private void CreateUserAccount(String email, final String name, String password) {
         // this method create user account with specific email and password
         mAuth.createUserWithEmailAndPassword(email,password)
@@ -84,6 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
     }
 
+    // start the new activity
     private void updateUI() {
         startActivity(LoginActivity);
         finish();

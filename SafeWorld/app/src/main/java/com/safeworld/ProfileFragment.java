@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
+/**
+ * The ProfileFragment use for show user profile
+ * @author nieruize
+ * @version 1.0
+ */
 public class ProfileFragment extends Fragment {
 
     @Override

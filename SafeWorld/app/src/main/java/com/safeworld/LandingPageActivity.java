@@ -10,9 +10,14 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 import com.safeworld.authentication.LoginActivity;
 import com.safeworld.authentication.RegisterActivity;
-
+/**
+ * The LandingPageActivity using for landing the welcome page
+ * @author nieruize
+ * @version 1.0
+ */
 public class LandingPageActivity extends AppCompatActivity {
 
+    // attribute
     private FirebaseAuth mAuth;
 
     @Override
@@ -26,6 +31,7 @@ public class LandingPageActivity extends AppCompatActivity {
         Button login = findViewById(R.id.login);
         Button signup = findViewById(R.id.signup);
 
+        // sign up page will show when user clicked
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +40,7 @@ public class LandingPageActivity extends AppCompatActivity {
             }
         });
 
+        // log in page will show when user clicked
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

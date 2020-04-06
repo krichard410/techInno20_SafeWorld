@@ -17,6 +17,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.safeworld.MainActivity;
 import com.safeworld.R;
 
+/**
+ * The loginActivity class implement the login function when the user click the login button
+ * @author nieruize
+ * @version 1.0
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private Button login_btn;
@@ -29,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // hide the actionbar in the top the screen
         getSupportActionBar().hide();
 
         userMail = findViewById(R.id.login_user_email);
@@ -37,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         HomeActivity = new Intent(getApplicationContext(), MainActivity.class);
         mAuth = FirebaseAuth.getInstance();
 
+        // implement the function of login button
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,10 +62,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // show the error message
     private void showMessage(String text) {
         Toast.makeText(getApplicationContext(),text,Toast.LENGTH_LONG).show();
     }
 
+    // implement the log in function by using the firebase authentication
     private void signIn(String mail, String password) {
         mAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -72,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // start the new activity
     private void updateUI() {
         startActivity(HomeActivity);
         finish();

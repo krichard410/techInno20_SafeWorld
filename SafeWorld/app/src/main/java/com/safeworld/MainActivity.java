@@ -10,7 +10,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+/**
+ * The MainActivity for hosting the fragment (news, course, posts, profile, upgrade)
+ * @author nieruize
+ * @version 1.0
+ */
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigation;
@@ -21,12 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        // instantiate the bottom navigation bar
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.container,
                 new NewsFragment()).commit();
     }
 
+    // control the bottom navigation function based on each specific cases
     BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -52,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+    // jump to specific page when user clicked
     public void openFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment);

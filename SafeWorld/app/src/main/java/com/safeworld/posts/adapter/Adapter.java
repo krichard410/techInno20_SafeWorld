@@ -15,11 +15,16 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
+/**
+ * The Adapter class using for displaying the posts list
+ * @author nieruize
+ * @version 1.0
+ */
 public class Adapter extends RecyclerView.Adapter<Adapter.PostViewHolder>{
     private Context mContext;
     private List<Post> mData;
 
+    // constructor
     public Adapter(Context context, List<Post> data) {
         mContext = context;
         mData = data;
@@ -27,12 +32,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PostViewHolder>{
 
     @NonNull
     @Override
+    // inflater the content to view
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View row = LayoutInflater.from(mContext).inflate(R.layout.fragment_posts_items,parent,false);
         return new PostViewHolder(row);
     }
 
     @Override
+    // bind the view into view holder
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
         Picasso.get().load(R.drawable.userphoto).into(holder.img_user);
         holder.tv_name.setText(mData.get(position).getTitle());
